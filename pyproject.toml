@@ -1,0 +1,19 @@
+[project]
+name = "lance-perf-test"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "sunxin.ddupg",email = "sunxin.ddupg@bytedance.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pylance (>=0.29.0,<0.30.0)",
+    "pyarrow (>=20.0.0,<21.0.0)",
+    "pandas (>=2.3.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
