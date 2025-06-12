@@ -89,9 +89,9 @@ def perf_test_lance_take():
 def perf_test():
     import timeit
     token = timeit.timeit(perf_test_lmdb, number=PERF_RUNS)
-    print(f"perf lmdb cost: {token}")
+    print(f"perf lmdb cost: {token * 1000} ms")
     token = timeit.timeit(perf_test_lance_take, number=PERF_RUNS)
-    print(f"perf lance take cost: {token}")
+    print(f"perf lance take cost: {token * 1000} ms")
 
 
 if __name__ == '__main__':
