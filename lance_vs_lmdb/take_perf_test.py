@@ -79,7 +79,7 @@ def perf_test_lmdb():
 
 
 def perf_test_lance_take():
-    ds = lance.dataset(LANCE_LOCAL_PATH, storage_options=STORAGE_OPTIONS, index_cache_size=1 << 30)
+    ds = lance.dataset(LANCE_LOCAL_PATH, storage_options=STORAGE_OPTIONS)
     for _ in range(PERF_RANDOM_COUNT):
         filtered = ds.take(indices=[random.randrange(0, PERF_RANDOM_RANGE)], columns=["value"])
         assert filtered.num_rows == 1
